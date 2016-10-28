@@ -1,0 +1,26 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading" style="font-size:large">
+        {{vm.title}}
+    </div>
+
+    <div class="panel-body">
+        <div class="wizard">
+            <!-- No need to specify full name because we are in the parent edit view-->
+            <a ui-sref=".info"
+               ui-sref-active="active"> <!-- CSS class for active tab-->
+                Basic Information
+            </a>
+            <a ui-sref=".price"
+               ui-sref-active="active">
+                Price Details
+            </a>
+            <a ui-sref=".tags"
+               ui-sref-active="active">
+                Search Tags
+            </a>
+        </div>
+
+        <div ui-view></div>
+    </div>
+
+</div>
