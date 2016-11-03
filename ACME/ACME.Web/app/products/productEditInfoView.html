@@ -1,1 +1,31 @@
-﻿<div>Product Edit Info View</div>
+﻿<form name="productForm" class="form-horizontal">
+    <!--use bootstraps horizontal form-->
+    <fieldset>
+        <legend>Basic Product Information</legend>
+        <div class="form-group">
+            <!-- The for attribute activates the control. In this case clicking the Product Name label would activate the text box-->
+            <!-- Placeholder provides a default value for the control-->
+            <!-- col-md-2 specifies that the label with occupy 2 columns out of the 12 column grid that bootstrap uses-->
+            <label class="col-md-2 control-label" for="inputProductName" >Product Name</label>
+
+            <!--The product name text box will use 4 columns-->
+            <div class="col-md-4">
+                <input type="text" id="inputProductName"
+                    placeholder="Product Name"
+                    ng-model="vm.product.productName"
+                    class="form-control" /> <!-- ng-model directive is used for two way binding with the model-->
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ïnputDescription" class="col-md-2 control-label">Description</label>
+
+            <!--The product description text area will use 10 columns-->
+            <div class="col-md-10">
+                <textarea id="ïnputDescription" rows="3"
+                    placeholder="Product Description"
+                    ng-model="vm.product.description"
+                    class="form-control"></textarea>
+            </div>
+        </div>
+    </fieldset>
+</form>

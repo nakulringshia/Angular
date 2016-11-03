@@ -67,6 +67,7 @@
              })
 
                 //Nested states 
+                //If a nested state does not specify a controller, the abstract state's controller is used. 
             .state("productEdit.info", {
                 url: "/info",
                 templateUrl: "app/products/productEditInfoView.html"
