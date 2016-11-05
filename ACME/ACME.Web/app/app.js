@@ -3,6 +3,8 @@
     var app = angular.module("productManagement",
                                ["common.services",
                                    "ui.router",
+                                   "ui.utils",
+                                   "ui.bootstrap",
                                    "productResourceMock"]);
 
     //app.config(
