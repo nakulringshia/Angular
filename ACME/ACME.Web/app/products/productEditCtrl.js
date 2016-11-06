@@ -29,12 +29,16 @@
 
         }
 
-        vm.submit = function () {
-            //the resource service provides a $save method.
-            vm.product.$save(function (data) {
-                toastr.success("Save Successful"); //toaster notifications
+        vm.submit = function (isValid) {
+            if (isValid) {
+                //the resource service provides a $save method.
+                vm.product.$save(function (data) {
+                    toastr.success("Save Successful"); //toaster notifications
+                }
+               );
             }
-           );
+            else
+                alert("Please correct the validation errors.");
         }
 
         vm.cancel = function () {
